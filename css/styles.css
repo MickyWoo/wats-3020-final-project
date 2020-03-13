@@ -1,0 +1,151 @@
+#startScreen {
+    display: block;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top  this allows me to place the button "infront" of StartScreen creating the illousion of two divs Stacking.  */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity being .4 */
+}
+
+#startButton {
+    align-content: center;
+    text-align: center;
+    background-color: #fefefe;
+    margin-top: 20%;
+    padding: 10%;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.health-box {
+    /* display: flex; */
+    background-color: #ccc;
+    height: 30px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.health-bar-red {
+    /* position: relative; */
+    background-color: red;
+    height: 100%;
+    width: 100%;
+}
+
+.health-bar {
+    position: relative;
+    background-color: #006400;
+    height: 30px;
+    width: 100%;
+    bottom: 30px;
+    /* to hid the red health bar, move from the bottom 30px above the red health bar */
+
+    /* margin: 0 auto; */
+}
+
+.health-bar-text {
+    color: #FFD700;
+}
+
+#story-text {
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: green;
+    align-content: center;
+    text-align: center;
+    text-shadow: .5px .5px lime;
+    
+}
+
+#image {
+    display: block;
+    /* if you display block, it allows me to modify it  */
+    margin-left: auto;
+    /* allows me to center image */
+    margin-right: auto;
+    width: 60%;
+    height: 40%;
+
+}
+
+button#undo {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+button#undo:hover {
+    border: none;
+    background: #333;
+    color: #fff;
+}
+
+#choices {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
+    white-space: nowrap;
+}
+
+#choices li {
+    white-space: normal;
+    padding: 0.5rem;
+    background: #e8e8e8;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin: 1rem 0;
+    border: 2px solid black;
+    z-index: 1
+
+}
+
+#choices li:hover {
+  
+    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+    color: white;
+
+    /* text font shadowing  */
+    text-shadow: 1px 2px black ; 
+
+    font-size: 20px;
+    border:dotted;
+    animation: slidebg 2s linear infinite;
+    font
+}
+
+@keyframes slidebg {
+    to {
+        background-position: 20vw;
+        /* slidegb-animation borrowed from: https://codepen.io/lemmin/pen/WObwRX */
+    }
+}
+
+
+
+h1,
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+body {
+    width: 80%;
+    margin: 1rem auto;
+    padding: 3rem 2rem;
+    background: #fafafa;
+    color: #666;
+    font-family: Helvetica, Arial, sans-serif;
+    border: 4px double #666;
+}

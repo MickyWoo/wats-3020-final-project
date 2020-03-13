@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>WATS 3020: Text Adventure Final</title>
+  <meta name="description" content="WATS 3020 Text Adventure Final ">
+  <meta name="author" content="Micky Woo">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="js/main.js" defer></script>
+
+  <!-- allowing me to use .animate -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+ 
+    <h1 id="story-title"> The Legend of Vox Machina - A Grog SpinOff</h1>
+    <p id="story-text"> Welcome to Taldore, GreyStone Castle </p>
+    <img id="image"  src="images/frontPage.jpg" alt="art Cover">
+    <hr>
+    <div class="health-box">
+      <div class="health-bar-red"></div>
+        <div class="health-bar">  
+          
+            <div class="health-bar-text">100</div>
+        </div>
+    </div>
+    <ul id="choices">
+    <h2> What will you do?</h2>
+    <div class="border">
+    <li id="choice1" data-slug>Start New Game</li>
+    <li id="choice1" >option 2</li>
+  </div>
+ 
+</ul>
+<!-- <audio controls loop autoplay>
+    <source src="Music/2019-01-02_-_8_Bit_Menu_-_David_Renda_-_FesliyanStudios.com.mp3"type="audio/mpeg" >
+    Your browser does not support the <code>audio</code> element. 
+  </audio> -->
+<p class="undo-link"><button id="undo">Undo last choice.</button></p>
+<br>
+<p class="save-button " onclick="saveGame()"><button id="save">Save Game </button></p>
+<p class="load-button " onclick="loadGame()"><button id="Load">Load Game</button></p>
+
+  <div id="startScreen">
+    <div id="startButton" onclick="closeScreen()"> <button> Start Game</button> 
+
+</div>
+</div> <!-- end of startScreen -->
+<div> All rights to images and music are reserved to their respective owners, this is a school project not intended for any monetary gains.</div>
+</body>
+</html>
