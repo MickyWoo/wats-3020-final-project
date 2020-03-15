@@ -68,14 +68,14 @@ let currentHealth = 100;
 
 function healthAnimation() {
     $(".health-bar").animate({
-        'width': currentHealth + '%'  // so it needs the % to keep the health animation relative to the health bar px set.
+        'width': currentHealth + '%' // so it needs the % to keep the health animation relative to the health bar px set.
     }, 700);
     $(".health-bar-red").animate({
         'width': currentHealth + '%'
     }, 900);
 }
 
-function displayNewHealth(){
+function displayNewHealth() {
     maxHealth.innerHTML = currentHealth;
 }
 
@@ -84,7 +84,7 @@ function applyHealing(heal) {
         alert("you healed for " + heal + " health");
         audioController.heal();
         currentHealth = currentHealth + heal;
-       
+
         displayNewHealth();
         healthAnimation();
         checkMaxHealth();
@@ -93,7 +93,7 @@ function applyHealing(heal) {
 
 function checkMaxHealth() {
     if (currentHealth > 100) {
-    resetHealth();
+        resetHealth();
     }
 }
 
@@ -188,14 +188,12 @@ var storyData = {
         }]
     },
     p2: {
+        imageSrc: `images/Axe.jpeg`,
         text: `Before heading out the door you reach over the and `,
 
         choices: [{
             text: `Go for the axe!`,
             setState: {
-
-                imageSrc: 'images/sword.jpg',
-
                 axe: true,
                 sword: false
             },
@@ -216,6 +214,7 @@ var storyData = {
         }]
     },
     p3: {
+        imageSrc: `images/Bear.jpeg`,
         text: `As you reach deep in the forest you see a wild bear and her cubs`,
         choices: [{
             text: `Go stealthly and grab a bear cub`,
@@ -243,6 +242,7 @@ var storyData = {
         }]
     },
     p4a: {
+        imageSrc: `images/Bear.jpeg`,
         text: `As best as you tried, you rolled a 1 and barbarians arn't very stealthy so the mama bear catchs you trying to 
                 sneak away with one of her cubs and claws at you 
                 <br><br>
@@ -260,6 +260,7 @@ var storyData = {
         }]
     },
     p4b: {
+        imageSrc: `images/Bear.jpeg`,
         text: `With some damage taken you go into a "Rage" and continue the fight taking less damage`,
 
         choices: [{
@@ -279,6 +280,7 @@ var storyData = {
         }]
     },
     p4c: {
+        imageSrc: `images/Bear.jpeg`,
         text: `You take some damage during the fight but you finish off the bear,`,
 
         choices: [{
@@ -302,7 +304,8 @@ var storyData = {
     },
 
     p4: {
-        text: `A few moments after the encounter, you hear a Loud and terrifying Roar.`,
+        imageSrc: `images\crows.jpg`,
+        text: `A few moments after the encounter, you hear a Loud and terrifying Roar. You see birds fly off in fear.`,
         choices: [{
             text: `Investigate the noise`,
             link: 'p5'
@@ -326,6 +329,8 @@ var storyData = {
         }]
     },
     p5: {
+
+        imageSrc: ` images/Forest.jpg`,
         text: `As you venture to the source of the noise, 
         crossing deep into the forest you come across broken tree branches that widen into 
         Trees splintered in half, and a few figures in the distance surrounding something larger. `,
@@ -342,6 +347,7 @@ var storyData = {
         }]
     },
     p5a: {
+        imageSrc: ` images/Forest.jpg`,
         text: `As you try and peer forward and depict the figures you cant quite make out who they are.`,
         choices: [{
             text: `More forward`,
@@ -362,6 +368,7 @@ var storyData = {
         }]
     },
     p5a2: {
+        imageSrc: `images/dragon scale.png`,
         text: `As you cirle around the LEFT, you notice large gashes in the surrounding, and what seems to be a Dragon Scale!!!`,
         choices: [{
             text: `You think, oh Crap!, and edge forward enough to see the figures`,
@@ -370,6 +377,7 @@ var storyData = {
     },
 
     p5b: {
+        imageSrc: `images/pack of wolves.png`,
         text: `As you move closer, you start to see who the figures are, They seem to be a pack of wolfs feasting on what looks to be a.... Giant Lizard`,
         choices: [{
             text: `Take a closer Look`,
@@ -381,6 +389,7 @@ var storyData = {
         }]
     },
     p5b1: {
+        imageSrc: `images/pack of wolves.png`,
         text: `You moved too close that you catch one of the wolfs attention keeping watch, you Fend all 6 Wolfs off, 
                 but take 20 dmg in the fight
                     you relize that the Giant Lizard has large gashes that are much too big for the wolfs, implying that a Larger monster is Near by`,
@@ -391,6 +400,7 @@ var storyData = {
     },
 
     p5c: {
+        imageSrc: `images/hole.jpg`,
         text: `As your Skip on your Merry way toward the figures, you Slip on a rock and incidently fall down a Hole. As you tumble down 
                 you take 10 pts of falling dmg. As you get up you notice a small path foward `,
         choices: [{
@@ -403,6 +413,7 @@ var storyData = {
         }]
     },
     p5c1: {
+        imageSrc: `images\Fountain.jpg`,
         text: `Moving forward you find a life fountain, and gain 25 health`,
         choices: [{
             text: `Move along the path`,
@@ -413,6 +424,7 @@ var storyData = {
         }]
     },
     p5c2: {
+        imageSrc: `images/giant lizard.jpg`,
         text: `You reach the end of the path, but when you look up you see a crack leading toward the surface, and poke your head out. 
                 What you realize, is that you had traveled underneath in a straight path toward the Figures you were trying to identify.
                 which happen to be a pack of wolfs feasting on what looks to be a.... Giant Lizard
@@ -423,6 +435,7 @@ var storyData = {
         }]
     },
     p6: {
+        imageSrc: `images/Dragon silhouette.jpg`,
         text: `As you head back, you hear the roar again, but overhead and as you look up you see a faint silhouette of a creature with wings quickly flying by.
         The the Probblem is, it was flying in the direction of your hometown.  `,
         choices: [{
@@ -434,6 +447,7 @@ var storyData = {
         }]
     },
     p7a: {
+        imageSrc: `images/Village onfire.jpg`,
         text: `You return to your hometown engulfed in Flames and are able to tend to some villagers that were in dire situations `,
         choices: [{
             text: `Look for other survivors`,
@@ -451,6 +465,7 @@ var storyData = {
     },
 
     p7: {
+        imageSrc: `images/Village onfire.jpg`,
         text: `You return to your hometown engulfed in Flames, bodies burning, Realizing you should have gotten back faster.`,
         choices: [{
             text: `Check on your Ale Reserves!!!`,
@@ -458,6 +473,7 @@ var storyData = {
         }]
     },
     p8a: {
+        imageSrc: `images/Potion.jpg`,
         text: `You find some other people in need of help and they return the favor with a Lesser Potion `,
         choices: [{
             text: `Check on your house.`,
@@ -465,6 +481,7 @@ var storyData = {
         }]
     },
     p8b: {
+        imageSrc: `images/Village onfire.jpg`,
         text: `As you reach your home, it is engulfed in flames `,
         choices: [{
             text: `Try to Run in see what you can save`,
@@ -476,6 +493,7 @@ var storyData = {
         }]
     },
     p8b1: {
+        imageSrc: `images/Village onfire.jpg`,
         text: `You run in and hurt by the flames, use a perception check on what is salvagable   `,
         choices: [{
             text: `You grab the one item you could before the house collapse, Your Titan Stone Knuckles`,
@@ -486,6 +504,7 @@ var storyData = {
         }]
     },
     p8b2: {
+        imageSrc: `images/Village onfire.jpg`,
         text: `As you reach the back entrance, the house collapse and everthing burns to the ground `,
         choices: [{
             text: `Check on your Ale Reserves!!!`,
@@ -493,6 +512,7 @@ var storyData = {
         }]
     },
     p8c: {
+        imageSrc: `images/Thordak.jpg`,
         text: `As you tread carefully following the path of destruction, you Find unfathomable. The Red Dragon himself - Thordak: the Cinder King!!!`,
         choices: [{
             text: `hide behind some broken rubble`,
@@ -509,90 +529,97 @@ var storyData = {
     },
 
     p9: {
+        imageSrc: `images/Broken barels.jpg`,
         text: `As you head around, you see that your Ale reserves have been Destroyed, you wail in disbelief and now you must find this evil who 
                 destroyed your Beloved ALE!!! `,
         choices: [{
             text: `go into a frenzied Rage and follow the path of destruction`,
             link: 'p8c',
-    }]
-},
-p9a: {
-    text: `You think, this is IMPOSSIBLE as you remember Vax Killing the dragon years ago.`,
-    choices: [{
-        text: `Take a peak and check its really Thordak! `,
-        link: 'p9a'
-    }, {
-        text: `Your Raging, you have no fear and think its just a look-a-like`,
-        link: 'p9b'
-    }, {
-        text: `You think to yourself, I need to heal up before heading into this fight and Use the Potion`,
-        link: 'p9b',
-        requiredState: (currentState) => currentState.potion ,
-        heal: 15
-    }]
-},
-p9b: {
-    text: `Charging forward you take out your weapon and `,
-    choices: [{
-        text: `Throw your weapon at its wing`,
-        link: 'p10'
-    }, {
-        text: `Run up and attack Recklessly`,
-        link: 'p10',
-        dmg: 50
-    }, {
-        text: `Dash! Right under Thordak`,
-        link: 'p10'
-    }]
-},
-p9c: {
-    text: `You say "remember ME?! as you smash your Titan Stone Knuckles together and Enlarge in size`,
-    choices: [{
-        text: `Grab some bolders and throw them`,
-        link: 'p10'
-    }, {
-        text: `Charge at Thordak`,
-        link: 'p10',
-        dmg: 50
-    }, {
-        text: `Clap your hand together to Disrupt Thordak`,
-        link: 'p10a'
-    }]
-},
-p10: {
-    text: `This Ends Part 1 of the side story, as I continue to create a better storyboard. I'll try my best to update this and get better.
+        }]
+    },
+    p9a: {
+        imageSrc: `images/Thordak.jpg`,
+        text: `You think, this is IMPOSSIBLE as you remember Vax Killing the dragon years ago.`,
+        choices: [{
+            text: `Take a peak and check its really Thordak! `,
+            link: 'p9a'
+        }, {
+            text: `Your Raging, you have no fear and think its just a look-a-like`,
+            link: 'p9b'
+        }, {
+            text: `You think to yourself, I need to heal up before heading into this fight and Use the Potion`,
+            link: 'p9b',
+            requiredState: (currentState) => currentState.potion,
+            heal: 15
+        }]
+    },
+    p9b: {
+        imageSrc: `images/Thordak.jpg`,
+        text: `Charging forward you take out your weapon and `,
+        choices: [{
+            text: `Throw your weapon at its wing`,
+            link: 'p10'
+        }, {
+            text: `Run up and attack Recklessly`,
+            link: 'p10',
+            dmg: 50
+        }, {
+            text: `Dash! Right under Thordak`,
+            link: 'p10'
+        }]
+    },
+    p9c: {
+        imageSrc: `images/titan stone.jpg`,
+        text: `You say "remember ME?! as you smash your Titan Stone Knuckles together and Enlarge in size`,
+        choices: [{
+            text: `Grab some bolders and throw them`,
+            link: 'p10'
+        }, {
+            text: `Charge at Thordak`,
+            link: 'p10',
+            dmg: 50
+        }, {
+            text: `Clap your hand together to Disrupt Thordak`,
+            link: 'p10a'
+        }]
+    },
+    p10: {
+        imageSrc: `images/End Screen of pt1.jpg`,
+        text: `This Ends Part 1 of the side story, as I continue to create a better storyboard. I'll try my best to update this and get better.
     <br><br>
     Normal Ending....
     `,
-    choices: [{
-        text: `Play Again?`,
-        link: 'p1'
-    }]
-},
-p10a: {
-    text: `You Disrupt Thodak just long enough to Land a good Punch, The attack staggers the dragon
+        choices: [{
+            text: `Play Again?`,
+            link: 'p1'
+        }]
+    },
+    p10a: {
+        imageSrc: `images/Pike-neclace.webp`,
+        text: `You Disrupt Thodak just long enough to Land a good Punch, The attack staggers the dragon
     <br><br>
-    A little Shiny Glint falls down you catch it, you recognize it as a "neckless of Sarenrae " the SAME one PIKE always carries around!!!`,
-    choices: [{
-        text: `Try and grab Thordak and bring him down`,
-        link: 'p10b'
-    }, {
-        text: `Use an Action Surge and Attack AGAIN!`,
-        link: 'p10b'
-    }]
-},
+    A little Shiny Glint falls down you catch it, you recognize it as a "necklace of Sarenrae " the SAME one PIKE always carries around!!!`,
+        choices: [{
+            text: `Try and grab Thordak and bring him down`,
+            link: 'p10b'
+        }, {
+            text: `Use an Action Surge and Attack AGAIN!`,
+            link: 'p10b'
+        }]
+    },
 
-p10b: {
-    text: `The Dragon regains its stance and then a louder Roar echos across the land. Thordak takes Flight and Heads East, You Try and grasp or pin him down, but he slips your Fingers.
+    p10b: {
+        imageSrc: `images/End Screen of pt1.jpg`,
+        text: `The Dragon regains its stance and then a louder Roar echos across the land. Thordak takes Flight and Heads East, You Try and grasp or pin him down, but he slips your Fingers.
     <br><br>
-    You realize now, this is more serious than you imagined, as Pike is in danger as you hold the neckless of Sarenrae tightly in your hands. You have a long journey ahead of you.
+    You realize now, this is more serious than you imagined, as Pike is in danger as you hold the necklace of Sarenrae tightly in your hands. You have a long journey ahead of you.
     <br><br>
     Secret Ending`,
-    choices: [{
-        text: `Play Again?`,
-        link: `p1`,
-    }]
-},
+        choices: [{
+            text: `Play Again?`,
+            link: `p1`,
+        }]
+    },
 };
 
 
