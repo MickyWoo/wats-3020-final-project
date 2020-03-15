@@ -321,7 +321,6 @@ var storyData = {
             and its not so it returns FALSE 
             (currentState.bearMeat === 3) >>> is a function that you can put in anything functionn you want 
 
-
             */
             requiredState: (currentState) => (currentState.meat === 3),
         }]
@@ -497,15 +496,103 @@ var storyData = {
         text: `As you tread carefully following the path of destruction, you Find unfathomable. The Red Dragon himself - Thordak: the Cinder King!!!`,
         choices: [{
             text: `hide behind some broken rubble`,
-            link: 'p8a'
+            link: 'p9a'
         }, {
             text: `Charge at Thordak`,
-            link: 'p8b'
+            link: 'p9b'
         }, {
             text: `Yell "Thordaaaak!!!" to get his attention.`,
-            link: 'p8c'
+            link: 'p9c',
+            requiredState: (currentState) => currentState.titanStoneKnuckles,
+
         }]
     },
+
+    p9: {
+        text: `As you head around, you see that your Ale reserves have been Destroyed, you wail in disbelief and now you must find this evil who 
+                destroyed your Beloved ALE!!! `,
+        choices: [{
+            text: `go into a frenzied Rage and follow the path of destruction`,
+            link: 'p8c',
+    }]
+},
+p9a: {
+    text: `You think, this is IMPOSSIBLE as you remember Vax Killing the dragon years ago.`,
+    choices: [{
+        text: `Take a peak and check its really Thordak! `,
+        link: 'p9a'
+    }, {
+        text: `Your Raging, you have no fear and think its just a look-a-like`,
+        link: 'p9b'
+    }, {
+        text: `You think to yourself, I need to heal up before heading into this fight and Use the Potion`,
+        link: 'p9b',
+        requiredState: (currentState) => currentState.potion ,
+        heal: 15
+    }]
+},
+p9b: {
+    text: `Charging forward you take out your weapon and `,
+    choices: [{
+        text: `Throw your weapon at its wing`,
+        link: 'p10'
+    }, {
+        text: `Run up and attack Recklessly`,
+        link: 'p10',
+        dmg: 50
+    }, {
+        text: `Dash! Right under Thordak`,
+        link: 'p10'
+    }]
+},
+p9c: {
+    text: `You say "remember ME?! as you smash your Titan Stone Knuckles together and Enlarge in size`,
+    choices: [{
+        text: `Grab some bolders and throw them`,
+        link: 'p10'
+    }, {
+        text: `Charge at Thordak`,
+        link: 'p10',
+        dmg: 50
+    }, {
+        text: `Clap your hand together to Disrupt Thordak`,
+        link: 'p10a'
+    }]
+},
+p10: {
+    text: `This Ends Part 1 of the side story, as I continue to create a better storyboard. I'll try my best to update this and get better.
+    <br><br>
+    Normal Ending....
+    `,
+    choices: [{
+        text: `Play Again?`,
+        link: 'p1'
+    }]
+},
+p10a: {
+    text: `You Disrupt Thodak just long enough to Land a good Punch, The attack staggers the dragon
+    <br><br>
+    A little Shiny Glint falls down you catch it, you recognize it as a "neckless of Sarenrae " the SAME one PIKE always carries around!!!`,
+    choices: [{
+        text: `Try and grab Thordak and bring him down`,
+        link: 'p10b'
+    }, {
+        text: `Use an Action Surge and Attack AGAIN!`,
+        link: 'p10b'
+    }]
+},
+
+p10b: {
+    text: `The Dragon regains its stance and then a louder Roar echos across the land. Thordak takes Flight and Heads East, You Try and grasp or pin him down, but he slips your Fingers.
+    <br><br>
+    You realize now, this is more serious than you imagined, as Pike is in danger as you hold the neckless of Sarenrae tightly in your hands. You have a long journey ahead of you.
+    <br><br>
+    Secret Ending`,
+    choices: [{
+        text: `Play Again?`,
+        link: `p1`,
+    }]
+},
 };
 
 
